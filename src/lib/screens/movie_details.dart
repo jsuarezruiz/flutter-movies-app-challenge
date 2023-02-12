@@ -205,7 +205,7 @@ class MovieDetails extends StatelessWidget {
                 ),
               ),
             MovieSummary(summary: movie.summary!),
-            const MovieCasting(),
+            MovieCasting(casting: movie.cast),
           ],
           ),
         ),

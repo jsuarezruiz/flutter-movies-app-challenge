@@ -28,10 +28,10 @@ class MovieService {
     ];
 
     var cast = [
-      Cast(name: 'James Mangold', image: 'actor_1.png', character: 'Director'),
-      Cast(name: 'Matt Damon', image: 'actor_2.png', character: 'Carrol'),
-      Cast(name: 'Christian Bale', image: 'actor_3.png', character: 'Ken Miles'),
-      Cast(name: 'Caitriona Balfe', image: 'actor_4.png', character: 'Mollie'),
+      Cast(name: 'James Mangold', image: 'images/actor_1.png', character: 'Director'),
+      Cast(name: 'Matt Damon', image: 'images/actor_2.png', character: 'Carrol'),
+      Cast(name: 'Christian Bale', image: 'images/actor_3.png', character: 'Ken Miles'),
+      Cast(name: 'Caitriona Balfe', image: 'images/actor_4.png', character: 'Mollie'),
     ];
 
     return [

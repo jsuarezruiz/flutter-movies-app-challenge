@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app_challenge/models/cast.dart';
 import 'package:movies_app_challenge/widgets/cast_item.dart';
 import 'package:movies_app_challenge/widgets/section_title.dart';
 
 class MovieCasting extends StatelessWidget {
-  const MovieCasting({Key? key}) : super(key: key);
+  final List<Cast> casting;
+  const MovieCasting({Key? key, required this.casting}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,27 +21,13 @@ class MovieCasting extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const <Widget>[
+            children: <Widget>[
+              for (var cast in casting)
               CastItem(
-                image: 'images/actor_1.png',
-                name: 'James Mangold',
-                character: 'Director',
-              ),
-              CastItem(
-                image: 'images/actor_2.png',
-                name: 'Matt \nDamon',
-                character: 'Carroll',
-              ),
-              CastItem(
-                image: 'images/actor_3.png',
-                name: 'Christian Bale',
-                character: 'Ken Miles',
-              ),
-              CastItem(
-                image: 'images/actor_4.png',
-                name: 'Caitriona Balfe',
-                character: 'Mollie',
-              ),
+                image: cast.image!,
+                name: cast.name!,
+                character: cast.character!,
+              )
             ],
           ),
         ],
